@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="nb">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styring av lys</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+
+</head>
+
+<body>
+  
+  
+  <!--- Top bar -->
+  <header>
+    
+    <div class="headerleft">
+      <div class="row">
+        
+        <div class="col">
+          <h3>Lys bryter</h3>
+          <label class="switch">
+            <input type="checkbox" name="check" onclick="onlyOne(this);lightButtonOn()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+        
+        <div class="col">
+          <h3>Automatisk</h3>
+          <label class="switch">
+            <input type="checkbox" name="check" onclick="onlyOne(this);lightButtonAutomatic()">
+            <span class="slider round"></span>
+          </label>
+        </div>
+      </div>
+      </div>
+        <div class="headerright">
+            <button onclick="displayDates()" type="button" class="btn btn-success" id="showProgram">Vis program</button>
+            <button onclick="displaySettings()" type="button" class="btn btn-primary" id="adjustProgram">Juster program</button>
+        </div>
+
+    
+ 
+    
+  
+  </header>
+
+
+<!--Nav Buttons-->
+
+
+
+
+
+<!--Day table-->
+  <table class="table" id="dayTable">
+    <thead>
+      <tr>
+        <th scope="col">Dag</th>
+        <th scope="col">Dato</th>
+        <th scope="col">Vekke</th>
+        <th scope="col">Sove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Mandag</td>
+        <td>01.01.2023</td>
+        <td>10:00</td>
+        <td>22:00</td>
+      </tr>
+      <tr>
+        <td>Tirsdag</td>
+        <td>02.01.2023</td>
+        <td>09:30</td>
+        <td>21:30</td>
+      </tr>
+      <tr>
+        <td>Onsdag</td>
+        <td>01.01.2023</td>
+        <td>09:00</td>
+        <td>21:00</td>
+      </tr>
+    </tbody>
+  </table>
+
+<!--Settings tab-->
+<div class="settingsTab" id="settingsTab">  
+  <div class="legge">
+    <p>Legger seg / Står opp</p>
+    <input type="time" id="currentStartTime">
+    <input type="time" id="currentStopTime">
+  </div>
+  <div class="dager">
+    <p>Antall dager</p>
+    <input type="number" id="numberOfDays">
+  </div>
+  <div class="mal">
+    <p>Mål</p>
+    <input type="time" id="targetStartTime" value="08:00" min="06:00" max="12:00">
+    <input type="time" id="targetStopTime" value="23:00" min="19:00" max="00:00">
+  </div>
+  </div>
+  <div class="tid">
+    <p>Tid som korrigeres</p>
+    <input type="time" id="correctionTime">
+  </div>
+  <div class="info">
+    <p id="infoField">Info kommer her når du fyller ut feltene.</p>
+  </div>
+</div>
+
+  
+
+    <script type="text/javascript" src="js/dist/bundle.js"></script>
+    <script type="text/javascript" src="js/timecalc.js"></script>
+    <script type="text/javascript" src="js/readDayPlansFromFile.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="assets/js/navbar_frontpage.js"></script>
+</body>
+
+</html>
+
+
