@@ -1,1 +1,1 @@
-# lightsystem
+# Public copy of bachelor lightsystem
